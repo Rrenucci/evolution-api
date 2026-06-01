@@ -5,8 +5,7 @@
   "main": "./dist/main.js",
   "type": "commonjs",
   "scripts": {
-    "build": "npx prisma generate && tsup",
-        "start": "tsx ./src/main.ts",
+        "build": "npx prisma generate --schema ./prisma/postgresql-schema.prisma && tsup",
     "start:prod": "node dist/main",
     "dev:server": "tsx watch ./src/main.ts",
     "test": "tsx watch ./test/all.test.ts",
